@@ -10,7 +10,7 @@ class WordCounter
     @frequency_count = Hash.new(0)
     @words.each { |w| frequency_count[w.upcase] += 1 }
     @tgr = EngTagger.new
-    @tagged = @tgr.add_tags(text)
+    @tagged = @tgr.add_tags(input_text)
   end
 
   def distinct_words
